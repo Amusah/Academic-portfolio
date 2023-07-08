@@ -1,0 +1,464 @@
+@import url('http://fonts.cdnfonts.com/css/akrobat');
+
+/****************Base Styles****************/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+  --main-color: #C147E9;
+  --text-color: #F6F1F1;
+}
+
+@font-face {
+    font-family: 'Ruhl';
+    src: url('/fonts/FrankRuhlLibre-Regular.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Ruhl Medium';
+    src: url('/fonts/FrankRuhlLibre-Medium.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Vibes';
+    src: url('/fonts/GreatVibes-Regular.ttf');
+  }
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Akrobat';
+}
+
+/************Navigation Bar***********/
+.main-head{
+        background: url('img/4.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 100vh;
+        z-index: 2;
+        position: relative;
+}
+
+/* .overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+} */
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+}
+
+#logo a{
+    font-size: 3rem;
+    font-family: 'Vibes';
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+
+nav .nav-links{
+    display: flex;
+    /* flex: 1 1 20rem; */
+    justify-content: space-between;
+    transition: all 0.1s ease-in;
+}
+
+nav .nav-links li{
+  padding: 0 2.5rem;
+  list-style: none;
+}
+
+nav .nav-links li a{
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: #000;
+  padding-bottom: 1.5rem;
+  /* letter-spacing: 0.2rem; */
+}
+
+nav .nav-links li a:hover{
+  border-bottom: 0.3rem solid var(--main-color);
+}
+
+nav .burger{
+  cursor: pointer;
+  display: none;
+}
+
+nav .burger span{
+  display: block;
+  padding: 0.1rem 1.9rem;
+  background-color: #000;
+  margin: 1rem;
+}
+
+nav .socials a{
+  padding: 0 1rem;
+  font-size: 2rem;
+  transition: all 0.1s;
+  color: #000;
+}
+
+nav .socials a:hover{
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+/************ Hero Section ***********/
+.text-box{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* max-width: 100%; */
+}
+
+.text-box .text-head h1{
+  font-family: 'Ruhl Medium';
+  font-size: 5rem;
+  color: #000;
+  animation: fadeInLeft 2s ease-out
+}
+
+.text-box .text-head h1 span{
+  color: var(--main-color);
+}
+
+.text-box .text-head h2{
+  font-size: 3rem;
+}
+
+/* .text-box .text-body{
+  width: 60%;
+} */
+
+.text-box .text-body p{
+  font-size: 2.5rem;
+  padding: 1rem 0 2rem;
+}
+
+.text-box .text-footer{
+  /* text-align: center; */
+  font-size: 2rem;
+  padding: 2rem 0;
+  animation: fadeInBottom 1.5s ease-out;
+}
+
+.text-box .text-footer a{
+  text-decoration: none;
+  padding: 1rem 3rem;
+  color: #000;
+  border-radius: 1.2rem;
+  /* transition: all .4s ease-in; */
+}
+
+.text-box .text-footer a:not(:last-child){
+  margin-right: 3rem;
+}
+
+.text-box .text-footer .more{
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+
+.text-box .text-footer .contact-btn{
+  border: 0.2rem solid var(--main-color);
+  color: #fff;
+}
+
+.text-box .text-footer .contact-btn:hover{
+  background-color: var(--main-color);
+}
+
+          /***********courses section************/
+.courses h1::after{
+  position: absolute;
+  content: '';
+  height: 0.3rem;
+  bottom: -0.9rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 10rem;
+  background: var(--main-color);
+}
+
+#courses{
+  min-height: 70vh;
+  padding: 10rem 0;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.courses{
+  text-align: center;
+}
+.courses h1{
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-family: 'Akrobat light';
+  position: relative;
+}
+
+.course-cards{
+  padding: 10rem 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.course-cards .card-bg{
+  background-color: var(--main-color);
+  box-shadow: 0.4rem 0.4rem 2rem 0.2rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  width: 30rem;
+  margin-bottom: 5rem;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+}
+
+.course-card{
+  /* width: 25rem; */
+  text-align: center;
+  background-color: #fff;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: 2rem 0;
+  /* border: 0.2rem solid red; */
+}
+
+.course-card .c-head{
+  width: 100%;
+  padding: 2.5rem 0;
+}
+
+.course-card .c-head i{
+  font-size: 5rem;
+}
+
+.course-card .c-head h3{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-family: 'Akrobat light';
+  letter-spacing: 0.2rem;
+  padding-top: 2rem;
+}
+
+.course-card .c-body{
+  padding: 0 0 2rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.course-card .c-body p{
+  font-size: 2rem;
+  /* text-align: left; */
+}
+
+.course-card .c-footer{
+  padding: 2rem 0;
+}
+
+.course-card .c-footer a{
+  font-size: 2rem;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.2rem;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  background-color: var(--main-color);
+  border-radius: .9rem;
+}
+
+
+
+
+
+
+
+/* Responsive layouts */
+@media screen and (max-width: 915px){
+  .main-head nav .socials{
+    display: none;
+  }
+
+  .main-head .text-head h1{
+    font-size: 4.5rem;
+  }
+
+  .main-head .text-head h2{
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 849px){
+  nav .burger{
+    display: block;
+    z-index: 6;
+  }
+  
+  .main-head nav .nav-links{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    align-items: center;
+    transition: transform 0.6s ease;
+    z-index: 5;
+  }
+
+  .main-head .text-box{
+    text-align: center;
+  }
+
+  .main-head nav .nav-links a{
+    color: #fff;
+    /* text-decoration: underline; */
+  }
+
+  .nav-open{ 
+    transform: translateX(-100%);
+  }
+
+  .toggle .line1{
+    transform: rotateZ(45deg);
+    /* transform: translateY(2rem); */
+    transition: all 1s ease;
+    background: white;
+    padding: 0.1rem 1.9rem;
+    /* margin: 0.5rem; */
+  }
+    
+  .toggle .line2{
+    opacity: 0;
+  }
+
+  .toggle .line3{
+    transform: rotateZ(-45deg);
+    /* transform: translateY(1px); */
+    transition: all 1s ease;
+    background: white;
+    padding: 0.1rem 1.9rem;
+    z-index: 9;
+    /* margin: 0.5rem; */
+  }
+
+  @media screen and (max-width: 822px){
+    .main-head .text-head h1{
+      font-size: 4rem;
+    }
+    
+  }
+  
+  @media screen and (max-width: 747px){
+    .main-head .text-head h1{
+      font-size: 3.5rem;
+    }
+    .main-head .text-body p{
+      font-size: 2.2rem;
+    }
+  }
+
+  @media screen and (max-width: 640px){
+    .main-head .text-box{
+      display: flex;
+      flex-direction: column;
+    }
+    html{
+      font-size: 52%;
+    }
+  }
+
+  @media screen and (max-width: 540px){
+    .main-head .text-box{
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 500px){
+    /* .main-head .text-head{
+      padding: 4rem 0;
+    } */
+    .main-head .text-head h1{
+      font-size: 3rem;
+      padding: 2rem 0;
+    }
+    /* .main-head .text-box{
+      text-align: center;
+    } */
+    .main-head .text-head h2{
+      font-size: 2rem;
+    }
+    .main-head .text-body{
+      display: none;
+    }
+    .main-head .text-box .text-footer{
+      padding: 4rem 0;
+    }
+    .main-head .text-box .text-footer a{
+      padding: 1rem 2rem;
+    }
+    .main-head nav .nav-links{
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 456px){
+    html{
+      font-size: 45%;
+    }
+
+    /* .main-head .text-box{
+      width: 100%;
+    } */
+  }
+}
+
+
+
+/* animations */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80%{
+    transform: translateX(2rem)
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
