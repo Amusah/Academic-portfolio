@@ -11,6 +11,9 @@
 :root{
   --main-color: #C147E9;
   --text-color: #F6F1F1;
+  --head-text: 4rem;
+  --head-font: 'Akrobat light';
+  --text-spacing: 0.5rem;
 }
 
 @font-face {
@@ -34,6 +37,13 @@ html{
 
 body {
     font-family: 'Akrobat';
+}
+
+.underline{
+  background-color: var(--main-color);
+  height: 0.3rem;
+  width: 15rem;
+  margin: 1rem auto 0;
 }
 
 /************Navigation Bar***********/
@@ -185,7 +195,7 @@ nav .socials a:hover{
 }
 
           /***********courses section************/
-.courses h1::after{
+/* .courses h1::after{
   position: absolute;
   content: '';
   height: 0.3rem;
@@ -195,7 +205,7 @@ nav .socials a:hover{
   right: 0;
   width: 10rem;
   background: var(--main-color);
-}
+} */
 
 #courses{
   min-height: 70vh;
@@ -208,10 +218,10 @@ nav .socials a:hover{
   text-align: center;
 }
 .courses h1{
-  font-size: 4rem;
+  font-size: var(--head-text);
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
-  font-family: 'Akrobat light';
+  letter-spacing: var(--text-spacing);
+  font-family: var(--head-font);
   position: relative;
 }
 
@@ -282,6 +292,93 @@ nav .socials a:hover{
   padding: 0.8rem 2rem;
   background-color: var(--main-color);
   border-radius: .9rem;
+  /* box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem var(--main-color); */
+}
+
+.course-card .c-footer a:hover{
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem var(--main-color);
+}
+
+          /***************About me**************/
+#about-me{
+  min-height: 80vh;
+}
+
+.about{
+  text-align: center;
+}
+
+.about h1{
+  font-size: var(--head-text);
+  font-family: var(--head-font);
+  letter-spacing: var(--text-spacing);
+}
+
+.about .profile-img{
+  padding: 10rem 0;
+}
+
+.about .profile-img img{
+  margin: 0 auto;
+  width: 30rem;
+  height: 28rem;
+  border-radius: 50%;
+  border: 0.4rem solid var(--main-color);
+  cursor: pointer;
+}
+
+.about .profile-img img:hover{
+  border: 0.4rem dashed var(--main-color);
+}
+
+.about .name{
+  font-size: 2.8rem;
+  font-family: 'Vibes';
+  /* text-transform: uppercase; */
+  letter-spacing: var(--text-spacing);
+}
+
+.about .education{
+  padding: 4rem 4rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.about .education .edu{
+  font-size: 2.5rem;
+  font-family: 'Akrobat light';
+  letter-spacing: var(--text-spacing);
+  text-transform: uppercase;
+  padding-bottom: 3rem;
+}
+
+.education .edu-content{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* margin: 0 auto; */
+}
+
+.education .edu-content .current{
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 5rem;
+}
+
+.edu-content .current h3{
+  font-size: 2rem;
+  font-family: 'Akrobat light';
+  text-transform:uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.education .edu-content .previous{
+  text-align: center;
+}
+
+.education .edu-content .former{
+  text-align: right;
 }
 
 
@@ -290,7 +387,12 @@ nav .socials a:hover{
 
 
 
-/* Responsive layouts */
+
+
+
+
+
+/************************ Responsive layouts **********************/
 @media screen and (max-width: 915px){
   .main-head nav .socials{
     display: none;
@@ -433,8 +535,19 @@ nav .socials a:hover{
 }
 
 
+/*About section grid*/
+@media screen and (max-width: 957px){
+  .education .edu-content .previous{
+    text-align: right;
+  }
+  
+  .education .edu-content .former{
+    text-align: center;
+  }
+}
 
-/* animations */
+
+/**************** animations ******************/
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
