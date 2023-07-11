@@ -6,10 +6,10 @@ const links = nav.querySelectorAll('a');
 
 // Carousel functionality
 let sliderImages = [
-    'img/1.jpg',
-    'img/2.jpg',
-    'img/3.jpg',
-    'img/4.jpg'
+    'img/a.jpeg',
+    'img/b.jpeg',
+    'img/c.jpeg',
+    //'img/4.jpg'
 ];
 
 let counter = 0;
