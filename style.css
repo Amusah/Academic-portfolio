@@ -504,7 +504,7 @@ nav .socials a:hover{
   margin-bottom: 5rem;
   background-color: #fff;
   width: 48rem;
-  height: 28rem;
+  height: 30rem;
   display: flex;
   align-items: center;
   border-bottom-left-radius: 5rem;
@@ -542,7 +542,7 @@ nav .socials a:hover{
   justify-content: center;
   text-align: left;
   line-height: 1.5;
-  padding-top: 4rem;
+  padding-top: 2rem;
 }
 
 .test-card .test-card-body p{
@@ -554,7 +554,7 @@ nav .socials a:hover{
   font-family: 'Vibes';
   text-align: right;
   padding-right: 2rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
   color: var(--main-color);
 }
 
